@@ -28,7 +28,7 @@
     _shopItem = shopItem;
     self.shopImage.image = [UIImage imageNamed:shopItem.image];
     self.shopName.text = shopItem.name;
-    self.shopPrice.text = [NSString stringWithFormat:@"$ %@",shopItem.money];
+    self.shopPrice.text = [NSString stringWithFormat:@"￥ %@",shopItem.money];
 }
 
 @end

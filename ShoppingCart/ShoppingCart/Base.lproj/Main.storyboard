@@ -19,9 +19,49 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anx-Zw-Oee" userLabel="BottomView">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <color key="backgroundColor" red="0.63554477819999999" green="0.43163131329999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总价" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zME-W3-pqG">
+                                        <rect key="frame" x="10" y="11" width="34" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkH-45-Vih">
+                                        <rect key="frame" x="54" y="11" width="11" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVH-cm-7u9">
+                                        <rect key="frame" x="70" y="11" width="11" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9x-iC-jBV">
+                                        <rect key="frame" x="290" y="7" width="75" height="30"/>
+                                        <state key="normal" title="清空购物车">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bie-ey-sbU">
+                                        <rect key="frame" x="250" y="7" width="30" height="30"/>
+                                        <state key="normal" title="结算"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="bie-ey-sbU" firstAttribute="centerY" secondItem="anx-Zw-Oee" secondAttribute="centerY" id="42d-YR-Peo"/>
+                                    <constraint firstItem="zME-W3-pqG" firstAttribute="leading" secondItem="anx-Zw-Oee" secondAttribute="leading" constant="10" id="BCk-92-kPI"/>
                                     <constraint firstAttribute="height" constant="44" id="G5D-dc-25A"/>
+                                    <constraint firstItem="KkH-45-Vih" firstAttribute="centerY" secondItem="anx-Zw-Oee" secondAttribute="centerY" id="Oev-Cd-1fY"/>
+                                    <constraint firstItem="R9x-iC-jBV" firstAttribute="leading" secondItem="bie-ey-sbU" secondAttribute="trailing" constant="10" id="bze-ZR-Wnn"/>
+                                    <constraint firstItem="KkH-45-Vih" firstAttribute="leading" secondItem="zME-W3-pqG" secondAttribute="trailing" constant="10" id="gKz-jE-qD9"/>
+                                    <constraint firstItem="xVH-cm-7u9" firstAttribute="centerY" secondItem="anx-Zw-Oee" secondAttribute="centerY" id="goe-0s-C4e"/>
+                                    <constraint firstItem="zME-W3-pqG" firstAttribute="centerY" secondItem="anx-Zw-Oee" secondAttribute="centerY" id="kMD-uV-AxF"/>
+                                    <constraint firstItem="R9x-iC-jBV" firstAttribute="centerY" secondItem="anx-Zw-Oee" secondAttribute="centerY" id="l6Q-gd-h9D"/>
+                                    <constraint firstItem="xVH-cm-7u9" firstAttribute="leading" secondItem="KkH-45-Vih" secondAttribute="trailing" constant="5" id="lb8-1q-GRz"/>
+                                    <constraint firstAttribute="trailing" secondItem="R9x-iC-jBV" secondAttribute="trailing" constant="10" id="o2J-3i-uBH"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N0T-Yk-25B">
