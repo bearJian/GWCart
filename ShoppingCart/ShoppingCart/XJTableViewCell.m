@@ -7,6 +7,7 @@
 //
 
 #import "XJTableViewCell.h"
+#import "XJShopItem.h"
 
 @interface XJTableViewCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *shopImage;
@@ -22,5 +23,12 @@
     
 }
 
+// 给模型赋值
+-(void)setShopItem:(XJShopItem *)shopItem{
+    _shopItem = shopItem;
+    self.shopImage.image = [UIImage imageNamed:shopItem.image];
+    self.shopName.text = shopItem.name;
+    self.shopPrice.text = shopItem.money;
+}
 
 @end

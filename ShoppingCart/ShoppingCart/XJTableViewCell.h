@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@class XJShopItem;
 
 @interface XJTableViewCell : UITableViewCell
-
+/**商品模型*/
+@property (nonatomic, strong) XJShopItem *shopItem;
 @end
