@@ -15,4 +15,8 @@
 @property (nonatomic, strong) NSString *money;
 /**商品图片*/
 @property (nonatomic, strong) NSString *image;
+
+/**记录购买商品的数量*/
+@property (nonatomic, assign) int count;
+
 @end

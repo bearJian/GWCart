@@ -14,6 +14,9 @@
 @interface ViewController ()<UITableViewDataSource>
 /**商品数据*/
 @property (nonatomic, strong) NSArray *shopArray;
+/**购买商品的总价*/
+@property (weak, nonatomic) IBOutlet UILabel *toatlPrice;
+
 @end
 
 @implementation ViewController
@@ -32,6 +35,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"购物车";
+    // 监听通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(minusClick:) name:@"minusClickNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addClick:) name:@"addClickNotification" object:nil];
+    
+}
+
+#pragma mark - 监听通知的方法
+-(void)minusClick:(NSNotification *)note{
+    // 发布者
+    XJTableViewCell *cell = note.object;
+    // 商品的价格 = 每增加一件商品，价格累加
+    int totalPrice = self.toatlPrice.text.intValue + cell.shopItem.money.intValue;
+    // 计算总价
+    self.toatlPrice.text = [NSString stringWithFormat:@"%d",totalPrice];
+    
+}
+
+-(void)addClick:(NSNotification *)note{
+    // 发布者
+    XJTableViewCell *cell = note.object;
+    // 商品的价格 = 每减少一件商品，价格累减
+    int totalPrice = self.toatlPrice.text.intValue - cell.shopItem.money.intValue;
+    // 计算总价
+    self.toatlPrice.text = [NSString stringWithFormat:@"%d",totalPrice];
 }
 
 #pragma mark - UITableViewDataSource

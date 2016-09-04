@@ -97,7 +97,7 @@
                                                     <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Woj-3u-1WU" customClass="XJCircleButton">
+                                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Woj-3u-1WU" customClass="XJCircleButton">
                                                     <rect key="frame" x="265" y="17" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="NjW-G3-KdH"/>
@@ -105,6 +105,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <state key="normal" title="-"/>
+                                                    <connections>
+                                                        <action selector="clickMinus:" destination="Eb0-nj-i9G" eventType="touchUpInside" id="LNF-tU-0kI"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsJ-W5-gaq" customClass="XJCircleButton">
                                                     <rect key="frame" x="335" y="17" width="30" height="30"/>
@@ -114,6 +117,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <state key="normal" title="+"/>
+                                                    <connections>
+                                                        <action selector="clickAdd:" destination="Eb0-nj-i9G" eventType="touchUpInside" id="eIC-ZW-Hlm"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUu-QV-04H">
                                                     <rect key="frame" x="300" y="17" width="30" height="30"/>
@@ -142,6 +148,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="countLable" destination="LUu-QV-04H" id="lMj-Ci-5n8"/>
+                                            <outlet property="minusBtn" destination="Woj-3u-1WU" id="dwo-UJ-nKy"/>
                                             <outlet property="shopImage" destination="mZJ-dW-M4p" id="Vk9-6t-pz0"/>
                                             <outlet property="shopName" destination="rAb-Gx-MA4" id="CUm-Db-BSl"/>
                                             <outlet property="shopPrice" destination="XHj-xE-bwV" id="xmd-5c-E2g"/>
@@ -165,6 +173,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="geS-bD-EzJ"/>
+                    <connections>
+                        <outlet property="toatlPrice" destination="xVH-cm-7u9" id="0Pt-eU-0Vh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vEc-zW-X4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
