@@ -32,6 +32,11 @@
     self.shopImage.image = [UIImage imageNamed:shopItem.image];
     self.shopName.text = shopItem.name;
     self.shopPrice.text = [NSString stringWithFormat:@"￥ %@",shopItem.money];
+    // 解决cell 商品数量被复用的问题
+    // 修改cell里面的属性不能通过修改控件的属性，通过修改模型
+    self.countLable.text = [NSString stringWithFormat:@"%d",shopItem.count];
+    //根据模型中的count，觉得减号按钮能否点击
+    self.minusBtn.enabled = shopItem.count > 0;
 }
 
 /**

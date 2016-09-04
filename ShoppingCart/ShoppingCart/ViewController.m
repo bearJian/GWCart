@@ -41,6 +41,7 @@
     
 }
 
+
 #pragma mark - 监听通知的方法
 -(void)minusClick:(NSNotification *)note{
     // 发布者
@@ -77,9 +78,9 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)dealloc{
+    // 移除通知
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end
