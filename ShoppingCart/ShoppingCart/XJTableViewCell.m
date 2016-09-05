@@ -51,8 +51,6 @@
     if (self.shopItem.count == 0) {
         self.minusBtn.enabled = NO;
     }
-    // 发布通知
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"addClickNotification" object:self];
 }
 
 /**
@@ -65,9 +63,7 @@
     self.countLable.text = [NSString stringWithFormat:@"%d",self.shopItem.count];
     // 点击加号，让按钮为可使用状态
     self.minusBtn.enabled = YES;
-    
-    // 发布通知
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"minusClickNotification" object:self];
+
 }
 
 @end

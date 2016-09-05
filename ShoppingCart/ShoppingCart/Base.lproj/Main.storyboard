@@ -43,10 +43,16 @@
                                         <state key="normal" title="清空购物车">
                                             <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clearBtn:" destination="Nvo-0C-6fa" eventType="touchUpInside" id="62X-H9-98p"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bie-ey-sbU">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bie-ey-sbU">
                                         <rect key="frame" x="250" y="7" width="30" height="30"/>
                                         <state key="normal" title="结算"/>
+                                        <connections>
+                                            <action selector="payBtn:" destination="Nvo-0C-6fa" eventType="touchUpInside" id="3Nj-8x-MSi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -174,6 +180,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="geS-bD-EzJ"/>
                     <connections>
+                        <outlet property="payBtn" destination="bie-ey-sbU" id="CJo-Yf-MIK"/>
+                        <outlet property="tableView" destination="N0T-Yk-25B" id="z4b-CW-lm6"/>
                         <outlet property="toatlPrice" destination="xVH-cm-7u9" id="0Pt-eU-0Vh"/>
                     </connections>
                 </viewController>
