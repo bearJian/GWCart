@@ -182,7 +182,7 @@
                     <connections>
                         <outlet property="payBtn" destination="bie-ey-sbU" id="CJo-Yf-MIK"/>
                         <outlet property="tableView" destination="N0T-Yk-25B" id="z4b-CW-lm6"/>
-                        <outlet property="toatlPrice" destination="xVH-cm-7u9" id="0Pt-eU-0Vh"/>
+                        <outlet property="totalPrice" destination="xVH-cm-7u9" id="dbl-an-ZAP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vEc-zW-X4J" userLabel="First Responder" sceneMemberID="firstResponder"/>

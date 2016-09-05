@@ -51,6 +51,10 @@
     if (self.shopItem.count == 0) {
         self.minusBtn.enabled = NO;
     }
+    // 调用代理方法
+    if ([self.delegate respondsToSelector:@selector(clickMinusBtn:)]) {
+        [self.delegate clickMinusBtn:self];
+    }
 }
 
 /**
@@ -63,7 +67,10 @@
     self.countLable.text = [NSString stringWithFormat:@"%d",self.shopItem.count];
     // 点击加号，让按钮为可使用状态
     self.minusBtn.enabled = YES;
-
+    // 调用代理方法
+    if ([self.delegate respondsToSelector:@selector(clickAddBtn:)]) {
+        [self.delegate clickAddBtn:self];
+    }
 }
 
 @end
